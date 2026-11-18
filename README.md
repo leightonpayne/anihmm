@@ -7,8 +7,7 @@ indicator, build a custom state path, or render individual frames with
 <img
   src="https://raw.githubusercontent.com/leightonpayne/anihmm/main/docs/assets/anihmm-demo.gif"
   alt="Terminal animation progressing through an HMM path"
-  width="100%"
->
+  width="100%">
 
 ## Install
 
@@ -38,8 +37,7 @@ print the results:
 <img
   src="https://raw.githubusercontent.com/leightonpayne/anihmm/main/docs/assets/processing-results.gif"
   alt="Processing animation handing off to HMM result counts"
-  width="100%"
->
+  width="100%">
 
 To show fixed text on a random path:
 
@@ -74,8 +72,7 @@ with progress_animation(columns=3) as progress:
 <img
   src="https://raw.githubusercontent.com/leightonpayne/anihmm/main/docs/assets/progress-indicator.gif"
   alt="Work advancing a predetermined HMM path"
-  width="100%"
->
+  width="100%">
 
 ## Build a sequence
 
@@ -100,32 +97,28 @@ Generate an exact number of random emissions:
 <img
   src="https://raw.githubusercontent.com/leightonpayne/anihmm/main/docs/assets/random-emissions.gif"
   alt="Random amino-acid emissions"
-  width="100%"
->
+  width="100%">
 
 Keep fixed text while generating a different path on each loop:
 
 <img
   src="https://raw.githubusercontent.com/leightonpayne/anihmm/main/docs/assets/changing-paths.gif"
   alt="WAITING emitted on changing random paths"
-  width="100%"
->
+  width="100%">
 
 Complete the unused columns of a bounded sequence with deletion states:
 
 <img
   src="https://raw.githubusercontent.com/leightonpayne/anihmm/main/docs/assets/delete-completion.gif"
   alt="Automatic deletion-state completion"
-  width="100%"
->
+  width="100%">
 
 Preview every possible transition before settling on one:
 
 <img
   src="https://raw.githubusercontent.com/leightonpayne/anihmm/main/docs/assets/transition-previews.gif"
   alt="Candidate transition previews"
-  width="100%"
->
+  width="100%">
 
 The runnable versions are in
 [`examples/`](https://github.com/leightonpayne/anihmm/tree/main/examples/), with explanations in
