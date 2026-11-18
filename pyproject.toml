@@ -1,0 +1,97 @@
+[project]
+name = "anihmm"
+version = "0.1.0"
+description = "Rich terminal HMM animation library for embedded loading and progress displays."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Leighton Payne", email = "leightonpayne98@gmail.com" }
+]
+requires-python = ">=3.10"
+keywords = [
+    "animation",
+    "terminal",
+    "rich",
+    "hmm",
+    "api",
+    "asyncio",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Terminals",
+]
+dependencies = [
+    "rich>=14.3.3",
+]
+
+[project.urls]
+Homepage = "https://leightonpayne.github.io/anihmm"
+Repository = "https://github.com/leightonpayne/anihmm"
+Documentation = "https://leightonpayne.github.io/anihmm"
+
+[build-system]
+requires = ["uv_build>=0.9.6,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+test = [
+    "pytest>=8.3.0",
+    "pytest-cov>=5.0.0",
+]
+dev = [
+    { include-group = "test" },
+    "pip-audit>=2.10.1",
+    "pillow>=13.0.0",
+    "pyright>=1.1.390",
+    "ruff>=0.8.0",
+    "rumdl>=0.2.52",
+]
+docs = [
+    "flexoki-zensical>=0.1.1",
+    "mkdocs-material>=9.7.7",
+    "mkdocstrings[python]>=1.0.4",
+    "pymdown-extensions>=11.0.1",
+    "zensical>=0.0.43",
+]
+
+[tool.uv.dependency-groups]
+dev = { requires-python = ">=3.11" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = [
+    "-ra",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "B",
+    "UP",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pyright]
+pythonVersion = "3.10"
+include = ["src"]
+typeCheckingMode = "standard"
