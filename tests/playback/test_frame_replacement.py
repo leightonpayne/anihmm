@@ -69,6 +69,7 @@ def test_replacement_clears_a_wider_animation_without_moving_surrounding_output(
     console = Console(
         file=output,
         force_terminal=True,
+        legacy_windows=False,
         no_color=False,
         color_system="standard",
         width=width,

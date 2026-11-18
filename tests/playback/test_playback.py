@@ -206,7 +206,7 @@ class PlaybackContractTests(unittest.TestCase):
         for alternate_screen in (False, True):
             with self.subTest(alternate_screen=alternate_screen):
                 output = StringIO()
-                console = Console(file=output, force_terminal=True)
+                console = Console(file=output, force_terminal=True, legacy_windows=False)
                 animate_frames(
                     [HMMFrame()],
                     console=console,
