@@ -25,12 +25,11 @@ dev = [
     { name = "rumdl", marker = "python_full_version >= '3.11'" },
 ]
 docs = [
-    { name = "flexoki-zensical" },
-    { name = "mkdocs-material", version = "9.7.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "mkdocs-material", version = "9.8.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "mkdocstrings", extra = ["python"] },
-    { name = "pymdown-extensions" },
-    { name = "zensical" },
+    { name = "flexoki-zensical", marker = "python_full_version >= '3.11'" },
+    { name = "mkdocs-material", marker = "python_full_version >= '3.11'" },
+    { name = "mkdocstrings", extra = ["python"], marker = "python_full_version >= '3.11'" },
+    { name = "pymdown-extensions", marker = "python_full_version >= '3.11'" },
+    { name = "zensical", marker = "python_full_version >= '3.11'" },
 ]
 test = [
     { name = "pytest" },
@@ -39,6 +38,7 @@ test = [
 
 [package.group-requires-python]
 dev = ">=3.11"
+docs = ">=3.11"
 
 [package.metadata]
 requires-dist = [{ name = "rich", specifier = ">=14.3.3" }]
@@ -54,11 +54,11 @@ dev = [
     { name = "rumdl", marker = "python_full_version >= '3.11'", specifier = ">=0.2.52" },
 ]
 docs = [
-    { name = "flexoki-zensical", specifier = ">=0.1.1" },
-    { name = "mkdocs-material", specifier = ">=9.7.7" },
-    { name = "mkdocstrings", extras = ["python"], specifier = ">=1.0.4" },
-    { name = "pymdown-extensions", specifier = ">=11.0.1" },
-    { name = "zensical", specifier = ">=0.0.43" },
+    { name = "flexoki-zensical", marker = "python_full_version >= '3.11'", specifier = ">=0.1.1" },
+    { name = "mkdocs-material", marker = "python_full_version >= '3.11'", specifier = ">=9.7.7" },
+    { name = "mkdocstrings", extras = ["python"], marker = "python_full_version >= '3.11'", specifier = ">=1.0.7" },
+    { name = "pymdown-extensions", marker = "python_full_version >= '3.11'", specifier = ">=11.0.1" },
+    { name = "zensical", marker = "python_full_version >= '3.11'", specifier = ">=0.0.43" },
 ]
 test = [
     { name = "pytest", specifier = ">=8.3.0" },
@@ -675,36 +675,8 @@ wheels = [
 
 [[package]]
 name = "mkdocs-material"
-version = "9.7.7"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version < '3.11'",
-]
-dependencies = [
-    { name = "babel" },
-    { name = "backrefs" },
-    { name = "colorama" },
-    { name = "jinja2" },
-    { name = "markdown" },
-    { name = "mkdocs" },
-    { name = "mkdocs-material-extensions" },
-    { name = "paginate" },
-    { name = "pygments" },
-    { name = "pymdown-extensions" },
-    { name = "requests" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/f1/cd/c05d3a530ba7934f144fb45f7203cd236adc25c7bdcc34673d202f4b0278/mkdocs_material-9.7.7.tar.gz", hash = "sha256:c0649c065b1b0512d60aad8c10f947f8e455284475239b364b610f2deb4d0855", size = 4097923, upload-time = "2026-07-17T16:21:33.156Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/ad/21/17c1bc9e6f47c972ad66fb2ac2568f99f90f1207eeb6fc3b34d094dba7b5/mkdocs_material-9.7.7-py3-none-any.whl", hash = "sha256:8ea9bb1737a5b524a5f9dcf2e1b4ebda8274ae3008aa7845720a97083bef708f", size = 9305438, upload-time = "2026-07-17T16:21:30.017Z" },
-]
-
-[[package]]
-name = "mkdocs-material"
 version = "9.8.1"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.11'",
-]
 dependencies = [
     { name = "babel" },
     { name = "backrefs" },
@@ -734,7 +706,7 @@ wheels = [
 
 [[package]]
 name = "mkdocstrings"
-version = "1.0.4"
+version = "1.0.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jinja2" },
@@ -744,9 +716,9 @@ dependencies = [
     { name = "mkdocs-autorefs" },
     { name = "pymdown-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/1d/5d/f888d4d3eb31359b327bc9b17a212d6ef03fe0b0682fbb3fc2cb849fb12b/mkdocstrings-1.0.4.tar.gz", hash = "sha256:3969a6515b77db65fd097b53c1b7aa4ae840bd71a2ee62a6a3e89503446d7172", size = 100088, upload-time = "2026-04-15T09:16:53.376Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/27/cc/e3ed8b16851f5d664dffcf8f55fc60d0d3f736a3edca21d1508105d1255a/mkdocstrings-1.0.8.tar.gz", hash = "sha256:b50fc326230906425c82ee9ec59b80e5db00892b2b593d4d0b841a0d4acf537b", size = 107444, upload-time = "2026-10-19T15:43:02.157Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/6e/94/be70f8ee9c45f2f62b39a1f0e9303bc20e138a8f3b8e50ffd89498e177e1/mkdocstrings-1.0.4-py3-none-any.whl", hash = "sha256:63464b4b29053514f32a1dbbf604e52876d5e638111b0c295ab7ed3cac73ca9b", size = 35560, upload-time = "2026-04-15T09:16:51.436Z" },
+    { url = "https://files.pythonhosted.org/packages/19/5e/4df7a2290e97c60a3ba410084966e5ab84aa89d15c8c98c195acbaefa8f4/mkdocstrings-1.0.8-py3-none-any.whl", hash = "sha256:4b03ed2b863009f1153f0d04aacb22a85b92afc28a0636d85717c92eecca638c", size = 42209, upload-time = "2026-10-19T15:43:00.65Z" },
 ]
 
 [package.optional-dependencies]
@@ -762,7 +734,6 @@ dependencies = [
     { name = "griffelib" },
     { name = "mkdocs-autorefs" },
     { name = "mkdocstrings" },
-    { name = "typing-extensions", marker = "python_full_version < '3.11'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/29/33/c225eaf898634bdda489a6766fc35d1683c640bffe0e0acd10646b13536d/mkdocstrings_python-2.0.3.tar.gz", hash = "sha256:c518632751cc869439b31c9d3177678ad2bfa5c21b79b863956ad68fc92c13b8", size = 199083, upload-time = "2026-02-20T10:38:36.368Z" }
 wheels = [
